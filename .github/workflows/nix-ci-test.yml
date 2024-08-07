@@ -1,5 +1,5 @@
 ---
-name: NixOS aarch64-linux workflow
+name: NixOS CI test workflow
 
 on:  # yamllint disable-line rule:truthy
   push:
@@ -9,7 +9,7 @@ on:  # yamllint disable-line rule:truthy
 
 jobs:
   build:
-    runs-on: [Linux, ARM64, nix]
+    runs-on: [nix, aarch64-linux]
 
     steps:
       - uses: actions/checkout@v2
